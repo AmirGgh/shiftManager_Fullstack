@@ -47,7 +47,7 @@ You can allocate an employee to any department that is not included.
 - The page shows you the max actions and actions allowd of all the users.
 - Max Action will display only if the user logged in at all.
 
-###USERS FOR LOGIN:
+### USERS FOR LOGIN:
 Bret
    Sincere@april.biz
 
