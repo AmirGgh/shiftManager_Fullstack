@@ -1,0 +1,20 @@
+{
+  "name": "service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon main"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.11.1",
+    "axios": "^1.2.5",
+    "jsonfile": "^6.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.4",
+    "nodemon": "^2.0.20"
+  }
+}
