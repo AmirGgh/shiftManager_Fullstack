@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPhone, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaPhone, FaLinkedin, FaEnvelope, FaGithub, FaRegFileAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const [email, setEmail] = useState(false)
@@ -17,6 +17,21 @@ const Contact = () => {
           <p className='text-4xl font-bold inline border-b-4  border-pink-600 text-gray-300'>
             Contact
           </p>
+          <p className='py-6 text-gray-300'>// More about me:</p>
+          <div className="flex p "><div></div><div></div></div>
+          <div className='flex items-center'>
+            <FaGithub className='text-gray-300 mr-2' />
+            <p className='text-gray-300'>
+              <a href='https://github.com/AmirGgh' className='text-gray-300'>My Github</a>
+            </p>
+          </div>
+          <br />
+          <div className='flex items-center'>
+            <FaRegFileAlt className='text-gray-300 mr-2' />
+            <p className='text-gray-300'>
+              <a href='https://github.com/AmirGgh' className='text-gray-300'>Resume</a>
+            </p>
+          </div>
           <p className='py-6 text-gray-300'>// Contact me via...</p>
           <div className='flex items-center'>
             <FaPhone className='text-gray-300 mr-2' />
@@ -25,8 +40,9 @@ const Contact = () => {
           <br />
           <div className='flex items-center'>
             <FaLinkedin className='text-gray-300 mr-2' />
-            <a href='https://www.linkedin.com/in/yourname/' className='text-gray-300'>Send me a message in LinkedIn</a>
+            <a href='https://www.linkedin.com/in/amir-gez/' className='text-gray-300'>Send me a message in LinkedIn</a>
           </div>
+
         </div>
         {email ? <>
           <input

@@ -8,15 +8,15 @@ const Project = ({ name, image, video }) => {
 
   return (
     <div
-      className="relative rounded-md"
+      className="relative "
       onMouseEnter={() => setDisplayVideo(true)}
       onMouseLeave={() => setDisplayVideo(false)}
     >
-      <img src={image} alt={name} className="w-full" />
+      <img src={image} alt={name} className="w-full rounded-md" />
       {displayVideo && (
         <video
           src={video}
-          className="absolute z-0 inset-0 w-full h-full object-cover"
+          className="absolute z-0 inset-0 w-full h-full rounded-md object-cover"
           autoPlay
           loop
           muted
@@ -31,7 +31,7 @@ const Work = () => {
   const project = data;
   return (
     <div name="work" className="w-full xl:h-min text-gray-300 ">
-      <div className="max-w-[1000px] mx-auto p-10 flex flex-col justify-center w-full h-full">
+      <div className="max-w-[1200px] mx-auto p-10 flex flex-col justify-center w-full h-full">
         <div className="pb-4">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
             Work
@@ -55,13 +55,13 @@ const Work = () => {
                   <p className="text-gray-200 text-sm md:text-base">{item.summary}</p>
                   <div className="pt-8 text-center  ">
                     <a href={item.github}>
-                      <button className="bg-gradient-to-r from-cyan-500 text-to-teal-500 text-white px-3 py-1 border-none rounded-md m-4">
+                      <button className="bg-gradient-to-r from-cyan-500 to-blue-500  text-white px-3 py-1 border-none rounded-md m-4">
                         Code
                       </button>
                     </a>
                     {item.live && (
                       <a href={item.live}>
-                        <button className="bg-gradient-to-r from-cyan-500 text-to-teal-500 text-white px-3 py-1 border-none rounded-md ml-8">
+                        <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-to-teal-500 text-white px-3 py-1 border-none rounded-md ml-8">
                           Live
                         </button>
                       </a>
