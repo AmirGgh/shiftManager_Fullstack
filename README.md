@@ -11,7 +11,10 @@ A fullstack application create with MongoDB, Node.js, Apollo GraphQL (service &a
 the users come from web servise -> username and emails(as password) in the end of this file.
 
 ## Installetions
-### server: in server file run 'npm i' to install all the pacages. then run 'npm start' to start the server at 'http://localhost:4000' 
+### Server:
+In the server file run 'npm i' to install all the pacages. then run 'npm start' to start the server at 'http://localhost:4000' 
+### Client:
+In the client file runs 'npm i' to install all the packages. then run 'npm start' to start the server at 'http://localhost:3000'  
 
 ## Architecture
 ### Server:
