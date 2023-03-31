@@ -10,6 +10,9 @@ A fullstack application create with MongoDB, Node.js, Apollo GraphQL (service &a
 - ONLY registered users can work (log in to) with the web site. 
 the users come from web servise -> username and emails(as password) in the end of this file.
 
+##Installetions
+server: in server file run 'npm i' to install all the pacages. then run 'npm start' to start the server at 'http://localhost:4000' 
+
 ## Architecture
 ### Server:
 The server is developed by using GraphQL Apollo Server. All calls on the server are made using GraphQL calls. The server manages databases realized by MongoDB and the modeling of the objects was carried out with Mongoose. In addition, the server works with a JSON file of permissions for users with the aid of two layers of Biasness and Data. The use of the application secured by using jwt.
