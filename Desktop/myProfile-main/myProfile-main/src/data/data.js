@@ -7,6 +7,7 @@ export const data = [
     id: 1,
     name: "Fullstack - Movies Application",
     image: MoviesManager,
+    video: "https://firebasestorage.googleapis.com/v0/b/projects-portfolio-a06a7.appspot.com/o/cinima.mp4?alt=media&token=dc20e6cc-da00-4d96-a484-6ef17f0d79b8",
     summary:
       "A web application that manages movies and users. The system was based on two Rest API servers and a client side in React.js. The architecture was divided according to Business and Data layers, when the servers were developed using Express and Node, database management realized by MongoDB and object modeling done with Mongoose. All server calls were made using CRUD-based Rest calls, with routers implemented and secured using JWT with Express. The client side is developed using React.js and Redux, with the design implemented using Material. The distribution of permissions in the application allowed only existing users to perform actions according to the limitations defined for them. The administrator had all possible permissions, while other users had partial permissions as defined. Possible permissions included edit members and edit subscribers. Only the administrator had permission to edit users in the users tab and could edit their permissions. On the subscriptions page, you can edit the movies each member has watched.",
     github: "https://github.com/AmirGgh/Cinima_Clube",
