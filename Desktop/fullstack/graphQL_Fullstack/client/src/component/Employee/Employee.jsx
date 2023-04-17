@@ -120,13 +120,13 @@ export default function Employee(props) {
                             else return selectedOption.id === emp.departmentID
                         }).map((emp) => (
                             <tr key={emp.firstName}>
-                                <td onClick={() => {
+                                <td style={{ textDecoration: 'underline' }} className='tdh' onClick={() => {
                                     if (!addEmp && !showEditDep) {
                                         setEditEmp(emp)
                                         setShowEdit(!showEdit)
                                     }
                                 }}>{emp.firstName} {emp.lastName}</td>
-                                <td onClick={(e) => {
+                                <td style={{ textDecoration: 'underline' }} className='tdh' onClick={(e) => {
                                     if (!addEmp && !showEdit) {
                                         setShowEditDep(!showEditDep)
                                         setEditDepartment(departments.find((d) => (emp.departmentID) === (d.id)))

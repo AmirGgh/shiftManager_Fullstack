@@ -19,7 +19,7 @@ export default function Department(props) {
             }
         })
     if (loading) return "loading.. "
-    if (error) return "Error! " + error;
+    if (error) return <div>"Error! " + {error}</div>
     const editD = () => {
         setEditDep(!editDep)
     }
@@ -37,16 +37,16 @@ export default function Department(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {departments.map((dep) => (
+                    {departments?.map((dep) => (
                         <tr key={dep.id}>
-                            <td onClick={() => {
+                            <td style={{ textDecoration: 'underline' }} className='tdh' onClick={() => {
                                 setEditDep(!editDep)
                                 setEditDepartment(dep)
                             }}>{dep.fullName}</td>
-                            <td>{employees.find((emp) => dep.manager === emp.id)?.firstName}</td>
+                            <td>{employees?.find((emp) => dep.manager === emp.id)?.firstName}</td>
                             <td>
                                 <ul>
-                                    {employees.filter((emp) => dep.id === emp.departmentID).map((e) => { return (<li key={e.id}>{e.firstName} {e.lastName}</li>) })}
+                                    {employees?.filter((emp) => dep.id === emp.departmentID).map((e) => { return (<li key={e.id}>{e.firstName} {e.lastName}</li>) })}
                                 </ul>
                             </td>
                         </tr>

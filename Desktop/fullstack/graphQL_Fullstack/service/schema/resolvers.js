@@ -123,8 +123,12 @@ const resolvers = {
                     user.token = token
                     return {
                         ...user._doc
+
                     }
                 }
+            }
+            else {
+                false
             }
         },
         async getDecAction(_, { ID }) {

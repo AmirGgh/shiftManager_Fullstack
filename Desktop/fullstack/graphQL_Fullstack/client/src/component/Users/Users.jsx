@@ -46,7 +46,7 @@ export default function Users() {
                     </tr>
                 </thead>
                 <tbody>
-                    {users.map((u) => (
+                    {users?.map((u) => (
                         <tr key={u.id}>
                             <td>{u.username}</td>
                             <td>{u.numOfActions}</td>

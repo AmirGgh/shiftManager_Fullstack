@@ -11,7 +11,23 @@ function Login(props) {
     let navigate = useNavigate()
     const context = useContext(AuthContext)
     const [errors, setErrors] = useState([])
+    const users = [{ user: "Bret", email: "Sincere@april.biz" },
 
+    { user: "Antonette", email: "Shanna@melissa.tv" },
+
+    { user: "Samantha", email: "Nathan@yesenia.net" },
+
+    { user: "Karianne", email: "Julianne.OConner@kory.org" },
+
+    { user: "Kamren", email: "Lucio_Hettinger@annie.ca" },
+
+    { user: "Leopoldo_Corkery", email: "Karley_Dach@jasper.info" },
+
+    { user: "Elwyn.Skiles", email: "Telly.Hoeger@billy.biz" },
+
+    { user: "Maxime_Nienow", email: "Sherwood@rosamond.me" },
+
+    { user: "Delphine", email: "Chaim_McDermott@dana.io" }]
     function loginUserCallback() {
         loginUser()
     }
@@ -19,7 +35,7 @@ function Login(props) {
         email: '',
         username: ''
     })
-    const [loginUser, { loading }] = useMutation(LOGIN_USER, {
+    const [loginUser, { loading, error }] = useMutation(LOGIN_USER, {
         update(proxy, { data: { loginUser: userData } }) {
             context.login(userData)
             navigate('/Employee')
@@ -30,6 +46,10 @@ function Login(props) {
         },
         variables: { loginInput: values }
     })
+    let errLogin = '';
+    if (error) {
+        errLogin = <h4 style={{ color: 'red' }}>wrong usernam or password</h4>
+    }
 
     return (
         <form className="login-form">
@@ -52,9 +72,14 @@ function Login(props) {
                     onChange={onChange}
                 />
             </div>
+            {errLogin}
             <button type="submit" className="submit-button" onClick={onSubmit}>
                 Login
             </button>
+            <h3>users:</h3>
+            <ul>
+                {users.map((user) => (<li key={user.user}><b>user: </b>{user.user}| <b>email: </b>{user.email}</li>))}
+            </ul>
         </form>
     );
 }

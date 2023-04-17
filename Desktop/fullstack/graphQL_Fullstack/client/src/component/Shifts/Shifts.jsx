@@ -79,16 +79,16 @@ export default function Shifts(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {shifts.map((s) => (
+                    {shifts?.map((s) => (
                         <tr key={s.id}>
-                            <td onClick={() => {
+                            <td style={{ textDecoration: 'underline' }} className='tdh' onClick={() => {
                                 if (!addShifts) {
                                     setUpdateShift(s)
                                     setEditShifts(!editShifts)
                                 }
                             }}>{s.Date}</td>
                             <td>{s.Starting} - {s.Ending}</td>
-                            <td>{employees.map((emp) => Boolean(emp.shiftsID.filter((shiftId) => shiftId === s.id).length > 0) && emp.firstName + ' ')}</td>
+                            <td>{employees?.map((emp) => Boolean(emp.shiftsID.filter((shiftId) => shiftId === s.id).length > 0) && emp.firstName + ' ')}</td>
                         </tr>))}
                 </tbody>
             </table>

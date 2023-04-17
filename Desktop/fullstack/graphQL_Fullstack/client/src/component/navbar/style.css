@@ -1,13 +1,5 @@
 /*nav bar*/
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    background-color: #333;
-    color: #fff;
-}
+
 
 nav li {
     padding: 10px;
@@ -16,4 +8,65 @@ nav li {
 nav a {
     color: #fff;
     text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #333;
+    color: #fff;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
 }

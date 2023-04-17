@@ -1,6 +1,5 @@
 table {
-    width: 100%;
-    border-collapse: collapse;
+    margin: auto;
 }
 
 th,
@@ -10,6 +9,13 @@ td {
     text-align: left;
 }
 
+.tdh:hover {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: gray;
+}
+
 th {
     background-color: #ddd;
     font-weight: bold;
@@ -17,4 +23,10 @@ th {
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+.container {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
